@@ -289,13 +289,10 @@ def getMementoDatetime(uri):
     memento_datemtime_query = MEMENTO_DATETIME_TEMPLATE % {'uri': uri}
     #LOGGER.debug('MEMENTO_DATETIME_TEMPLATE: %s' % memento_datemtime_query )
     sparql_results = sparqlQuery(memento_datemtime_query)
-    response = None
     try:
-        memento_datetime = sparql_results[0]['date']['value']
-        response = make_response(memento_datetime, 200)
+        return sparql_results[0]['date']['value']
     except:
-        response = make_response(
-            "Not found. Could not retrieve resource metadata", 404)
+        return None
     return response
 
 
@@ -328,18 +325,17 @@ def dataRepresentationCallback(uri, linkformat):
         response.headers[
             'Content-Type'] = 'application/link-format; charset=utf-8'
     else:
-        mementoDatetimeResponseObj = getMementoDatetime(uri)
+        mdt = getMementoDatetime(uri)
         describe_query = DESCRIBE_TEMPLATE % {'uri': uri}
         sparql_results = sparqlQuery(
             describe_query, format='application/rdf+xml')
         response = make_response(sparql_results, 200)
         response.headers['Content-Type'] = 'application/rdf+xml; charset=utf-8'
-        response.headers[
-        'Memento-Datetime'] = stringToHTTPDate(mementoDatetimeResponseObj.data.
-                                               decode(encoding='UTF-8'))
+        if mdt!=None:
+            response.headers['Memento-Datetime'] = stringToHTTPDate(mdt)
         response.headers['Link'] = '<%(localhost_uri_g)s>; rel="original timegate", ' \
         '<%(localhost_uri_t)s>; rel="timemap"' % {
-            'localhost_uri_g': localhost_uri_g, 'localhost_uri_t': localhost_uri_t}
+        'localhost_uri_g': localhost_uri_g, 'localhost_uri_t': localhost_uri_t}
     return response
 
 
