@@ -333,9 +333,9 @@ def dataRepresentationCallback(uri, linkformat):
         response.headers['Content-Type'] = 'application/rdf+xml; charset=utf-8'
         if mdt!=None:
             response.headers['Memento-Datetime'] = stringToHTTPDate(mdt)
-        response.headers['Link'] = '<%(localhost_uri_g)s>; rel="original timegate", ' \
-        '<%(localhost_uri_t)s>; rel="timemap"' % {
-        'localhost_uri_g': localhost_uri_g, 'localhost_uri_t': localhost_uri_t}
+            response.headers['Link'] = '<%(localhost_uri_g)s>; rel="original timegate", ' \
+            '<%(localhost_uri_t)s>; rel="timemap"' % {
+            'localhost_uri_g': localhost_uri_g, 'localhost_uri_t': localhost_uri_t}
     return response
 
 
