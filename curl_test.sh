@@ -20,3 +20,6 @@ curl -L --dump-header "response_headers6.txt" --header "Accept:application/link-
 
 # Request "timemap" in rdf/xml format (default)
 curl -L --dump-header "response_headers7.txt" "http://localhost:5000/memento/01992L0043?rel=timemap"
+
+#Request a memento in the future
+curl -L --dump-header "response_headers8.txt" --header "Accept-Datetime:Fri, 01 May 2015 12:00:0 GMT" "http://localhost:5000/memento/01992L0043"
