@@ -23,7 +23,7 @@ class MementoTestCase(unittest.TestCase):
         self.assertNotIn(r.location, self.fixture.intermediate_resources)
         self.assertNotIn(r.location, self.fixture.intermediate_timegates)
         self.assertNotIn(r.location, self.fixture.intermediate_timemaps)
-        self.assertIn('accept-datetime',r.vary) # thelen
+        self.assertIn('accept-datetime',r.vary)
 
     def test_original_timegate(self):
         r = self.app.get(self.fixture.original_timegate, headers={'Accept': 'application/rdf+xml', 'Accept-Datetime':'Sat, 10 Nov 2012 12:00:0 GMT'})
@@ -43,8 +43,8 @@ class MementoTestCase(unittest.TestCase):
         self.assertNotIn('Memento-Datetime',r.headers)
         self.assertIn(self.fixture.original_timegate+'>;rel="original timegate"', str(r.data))
         self.assertIn(self.fixture.original_timemap+'>;rel="self";type="application/link-format"', str(r.data))
-        # self.assertGreaterEqual(str(r.data).count('rel="memento"'), 0) thelen (compare to number of mementos defined in config?)
-        # self.assertGreaterEqual(str(r.data).count('rel="timemap"'), 0) thelen (compare to number of mementos defined in config?)
+        memento_or_timemap_rel = str(r.data).count('rel="memento"')>= 1 or str(r.data).count('rel="timemap"')>=1
+        self.assertTrue(memento_or_timemap_rel)
 
     def test_intermediate_timegate(self):
         for i in self.fixture.intermediate_timegates:
@@ -53,7 +53,7 @@ class MementoTestCase(unittest.TestCase):
             assert r.location in self.fixture.intermediate_resources or self.fixture.intermediate_timegates
             self.assertIn(self.fixture.original_timegate+'>; rel="original timegate"', r.headers['Link'])
             self.assertIn(self.fixture.original_timemap+'>; rel="timemap"', r.headers['Link'])
-            self.assertIn('accept-datetime',r.vary) # thelen
+            self.assertNotIn('accept-datetime',r.vary)
             self.assertNotIn('Memento-Datetime',r.headers)
 
     def test_intermediate_timemap(self):
@@ -65,8 +65,8 @@ class MementoTestCase(unittest.TestCase):
             self.assertNotIn('Memento-Datetime',r.headers)
             self.assertIn(self.fixture.original_timegate+'>;rel="original timegate"', str(r.data))
             self.assertIn(i+'>;rel="self";type="application/link-format"', str(r.data))
-            # self.assertGreaterEqual(str(r.data).count('rel="memento"'), 0) thelen (compare to number of mementos defined in config?)
-            # self.assertGreaterEqual(str(r.data).count('rel="timemap"'), 0) thelen (compare to number of mementos defined in config?)
+            memento_or_timemap_rel = str(r.data).count('rel="memento"')>= 1 or str(r.data).count('rel="timemap"')>=1
+            self.assertTrue(memento_or_timemap_rel)
 
     def test_memento(self):
         for i in self.fixture.mementos:
@@ -84,7 +84,6 @@ class MementoTestCase(unittest.TestCase):
         for i in self.fixture.intermediate_resources:
             r = self.app.get(i,headers={'Accept': 'application/rdf+xml', 'Accept-Datetime':'Sat, 10 Nov 2012 12:00:0 GMT'})
             self.assertEqual(303,r.status_code)
-            assert r.location not in self.fixture.intermediate_resources or self.fixture.intermediate_timegates # thelen
             self.assertIn(r.location, self.fixture.mementos)
             self.assertNotIn('Memento-Datetime', r.headers)
             self.assertIn(self.fixture.original_timegate+'>; rel="original timegate"',r.headers['Link'])

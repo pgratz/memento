@@ -207,7 +207,7 @@ def processMementoRequest(id=None):
     if not(isEvolutiveWork(uri)):
         response = nonInformationResourceCallback(uri, uri_r)
     elif uri_r == uri and not('Accept-Datetime' in request.headers):
-        response = nonInformationResourceCallback(uri, uri_r)
+        response = nonInformationResourceCallback(uri, uri_r, 'accept-datetime')
     elif uri_r == uri and 'Accept-Datetime' in request.headers:
         response = originalTimegateCallback(uri)
     elif uri_r != uri:
@@ -305,7 +305,7 @@ def intermediateResourceCallBack(uri, uri_r):
     return redirect_obj
 
 
-def nonInformationResourceCallback(uri, uri_r):
+def nonInformationResourceCallback(uri, uri_r, vary=None):
     """Processing logic when requesting an individual work.
        From a memento point of view an individual work is also an intermediate resource.
     """
@@ -327,6 +327,8 @@ def nonInformationResourceCallback(uri, uri_r):
             '<%(localhost_uri_t)s>; rel="timemap"' % {
                 'localhost_uri_r': localhost_uri_r, 'localhost_uri_t': localhost_uri_t}
         response.headers['Link']+= ''.join([', <'+toLocalhostUri(i['predecessor']['value'])+'>; rel="'+PREDECESSOR_RELATION+'"; lang="'+(i['languages']['value'].lower())+'"' for i in sparql_results])
+        if(vary is not None):
+            response.headers['Vary'] = vary
     return response
 
 
