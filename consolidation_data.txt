@@ -1,39 +1,41 @@
-PREFIX cdm: <http://publications.europa.eu/ontology/cdm#> INSERT IN GRAPH <http://consolidation/test> 
-{ 
-<http://publications.europa.eu/resource/celex/01992L0043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> . 
+PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX ns1:	<http://publications.europa.eu/resource/authority/language/>
+INSERT IN GRAPH <http://consolidation/test>
+{
+<http://publications.europa.eu/resource/celex/01992L0043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> .
 <http://publications.europa.eu/resource/celex/01992L0043> <http://publications.europa.eu/ontology/cdm#datetime_negotiation> <http://publications.europa.eu/ontology/cdm#work_date_document>.
 <http://publications.europa.eu/resource/celex/01992L0043> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20130701> .
 <http://publications.europa.eu/resource/celex/01992L0043> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20040501> .
 <http://publications.europa.eu/resource/celex/01992L0043> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20150501> .
 
-<http://publications.europa.eu/resource/celex/01992L0043-20130701> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> . 
+<http://publications.europa.eu/resource/celex/01992L0043-20130701> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> .
 <http://publications.europa.eu/resource/celex/01992L0043-20130701> <http://publications.europa.eu/ontology/cdm#datetime_negotiation> <http://publications.europa.eu/ontology/cdm#work_date_creation>.
 <http://publications.europa.eu/resource/celex/01992L0043-20130701> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20130701_0> .
 <http://publications.europa.eu/resource/celex/01992L0043-20130701> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20130701_1> .
 <http://publications.europa.eu/resource/celex/01992L0043-20130701> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20130701_2> .
 
-<http://publications.europa.eu/resource/celex/01992L0043-20040501> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> . 
+<http://publications.europa.eu/resource/celex/01992L0043-20040501> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> .
 <http://publications.europa.eu/resource/celex/01992L0043-20040501> <http://publications.europa.eu/ontology/cdm#datetime_negotiation> <http://publications.europa.eu/ontology/cdm#work_date_creation>.
 <http://publications.europa.eu/resource/celex/01992L0043-20040501> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20040501_0> .
 <http://publications.europa.eu/resource/celex/01992L0043-20040501> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20040501_1> .
 
-<http://publications.europa.eu/resource/celex/01992L0043-20150501> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> . 
+<http://publications.europa.eu/resource/celex/01992L0043-20150501> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> .
 <http://publications.europa.eu/resource/celex/01992L0043-20150501> <http://publications.europa.eu/ontology/cdm#datetime_negotiation> <http://publications.europa.eu/ontology/cdm#work_date_creation>.
 <http://publications.europa.eu/resource/celex/01992L0043-20150501> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20150501_0> .
 <http://publications.europa.eu/resource/celex/01992L0043-20150501> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20150501_1> .
 <http://publications.europa.eu/resource/celex/01992L0043-20150501> <http://publications.europa.eu/ontology/cdm#work_date_document> "2015-05-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 
 <http://publications.europa.eu/resource/celex/01992L0043-20130701_0> <http://publications.europa.eu/ontology/cdm#work_date_document> "2013-07-01"^^<http://www.w3.org/2001/XMLSchema#date>.
-<http://publications.europa.eu/resource/celex/01992L0043-20130701_0> <http://publications.europa.eu/ontology/cdm#work_date_creation> "2013-07-01"^^<http://www.w3.org/2001/XMLSchema#date>.
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_0> <http://publications.europa.eu/ontology/cdm#work_date_creation> "2013-07-02"^^<http://www.w3.org/2001/XMLSchema#date>.
 
 <http://publications.europa.eu/resource/celex/01992L0043-20130701_1> <http://publications.europa.eu/ontology/cdm#work_date_document> "2013-07-01"^^<http://www.w3.org/2001/XMLSchema#date>.
 <http://publications.europa.eu/resource/celex/01992L0043-20130701_1> <http://publications.europa.eu/ontology/cdm#work_date_creation> "2013-09-01"^^<http://www.w3.org/2001/XMLSchema#date>.
 
-<http://publications.europa.eu/resource/celex/01992L0043-20130701_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> . 
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/ontology/cdm#evolutive_work> .
 <http://publications.europa.eu/resource/celex/01992L0043-20130701_2> <http://publications.europa.eu/ontology/cdm#datetime_negotiation> <http://publications.europa.eu/ontology/cdm#work_date_creation_legacy>.
 <http://publications.europa.eu/resource/celex/01992L0043-20130701_2> <http://publications.europa.eu/ontology/cdm#work_date_document> "2013-07-01"^^<http://www.w3.org/2001/XMLSchema#date>.
 <http://publications.europa.eu/resource/celex/01992L0043-20130701_2> <http://publications.europa.eu/ontology/cdm#work_date_creation> "2014-09-12"^^<http://www.w3.org/2001/XMLSchema#date>.
-<http://publications.europa.eu/resource/celex/01992L0043-20130701_2> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0> . 
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0> .
 <http://publications.europa.eu/resource/celex/01992L0043-20130701_2> <http://publications.europa.eu/ontology/cdm#complex_work_has_member_work> <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_1> .
 
 <http://publications.europa.eu/resource/celex/01992L0043-20040501_0> <http://publications.europa.eu/ontology/cdm#work_date_document> "2004-05-01"^^<http://www.w3.org/2001/XMLSchema#date>.
@@ -134,4 +136,81 @@ _:N8dcb1510305c44caa81da58824c4f429 <http://www.w3.org/2002/07/owl#annotatedTarg
 <http://publications.europa.eu/resource/celex/01992L0043-20040501> <http://publications.europa.eu/ontology/cdm#act_consolidated_based_on_resource_legal> <http://publications.europa.eu/resource/celex/31992L0043> .
 <http://publications.europa.eu/resource/celex/01992L0043-20040501> <http://publications.europa.eu/ontology/cdm#work_id_document> "consolidation:1992L0043/20040501"^^<http://www.w3.org/2001/XMLSchema#string> .
 
+<http://publications.europa.eu/resource/cellar/01992L0043> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043> .
+<http://publications.europa.eu/resource/cellar/01992L0043-20130701> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20130701>.
+<http://publications.europa.eu/resource/cellar/01992L0043-20040501> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20040501>.
+<http://publications.europa.eu/resource/cellar/01992L0043-20150501> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20150501>.
+<http://publications.europa.eu/resource/cellar/01992L0043-20130701_2> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20130701_2>.
+<http://publications.europa.eu/resource/cellar/01992L0043-20130701_0> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20130701_0> .
+<http://publications.europa.eu/resource/cellar/01992L0043-20130701_1> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20130701_1> .
+<http://publications.europa.eu/resource/cellar/01992L0043-20040501_0> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20040501_0> .
+<http://publications.europa.eu/resource/cellar/01992L0043-20040501_1> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20040501_1> .
+<http://publications.europa.eu/resource/cellar/01992L0043-20150501_0> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20150501_0> .
+<http://publications.europa.eu/resource/cellar/01992L0043-20150501_1> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20150501_1> .
+<http://publications.europa.eu/resource/cellar/01992L0043-20130701_2_0> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0> .
+<http://publications.europa.eu/resource/cellar/01992L0043-20130701_2_1> owl:sameAs <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_1> .
+
+<http://publications.europa.eu/resource/celex/01992L0043-20130701>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043> .
+<http://publications.europa.eu/resource/celex/01992L0043-20040501>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043> .
+<http://publications.europa.eu/resource/celex/01992L0043-20150501>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_0>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043-20130701> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_1>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043-20130701> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043-20130701> .
+<http://publications.europa.eu/resource/celex/01992L0043-20040501_0>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043-20040501> .
+<http://publications.europa.eu/resource/celex/01992L0043-20040501_1>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043-20040501> .
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_0>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043-20150501> .
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_1>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043-20150501> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043-20130701_2> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_1>	cdm:work_is_member_of_complex_work	<http://publications.europa.eu/resource/celex/01992L0043-20130701_2> .
+
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_0.ENG> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20150501_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_0.FRA> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20150501_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_0.DEU> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20150501_0> .
+
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_1.ENG> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20150501_1> .
+
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_0.ENG> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_0.FRA> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_0.DEU> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_0> .
+
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_1.ENG> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_1> .
+
+<http://publications.europa.eu/resource/celex/01992L0043-20040501_0.ENG> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20040501_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20040501_0.FRA> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20040501_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20040501_0.DEU> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20040501_0> .
+
+
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0.ENG> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0.FRA> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0.DEU> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0> .
+
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_1.ENG> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_1> .
+
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_0.ENG>	cdm:expression_uses_language	ns1:ENG .
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_0.FRA>	cdm:expression_uses_language	ns1:FRA .
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_0.DEU>	cdm:expression_uses_language	ns1:DEU .
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_1.ENG>	cdm:expression_uses_language	ns1:ENG .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_0.ENG>	cdm:expression_uses_language	ns1:ENG .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_0.FRA>	cdm:expression_uses_language	ns1:FRA .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_0.DEU>	cdm:expression_uses_language	ns1:DEU .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_1.ENG>	cdm:expression_uses_language	ns1:ENG .
+<http://publications.europa.eu/resource/celex/01992L0043-20040501_0.ENG>	cdm:expression_uses_language	ns1:ENG .
+<http://publications.europa.eu/resource/celex/01992L0043-20040501_0.FRA>	cdm:expression_uses_language	ns1:FRA .
+<http://publications.europa.eu/resource/celex/01992L0043-20040501_0.DEU>	cdm:expression_uses_language	ns1:DEU .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0.ENG>	cdm:expression_uses_language	ns1:ENG .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0.FRA>	cdm:expression_uses_language	ns1:FRA .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0.DEU>	cdm:expression_uses_language	ns1:DEU .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_1.ENG>	cdm:expression_uses_language	ns1:ENG .
+
+
+<http://publications.europa.eu/resource/celex/01992L0043-20150501_1> cdm:work_is_logical_successor_of_work <http://publications.europa.eu/resource/celex/01992L0043-20150501_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_1> cdm:work_is_logical_successor_of_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_0> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_2_1> cdm:work_is_logical_successor_of_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_2_0> .
+
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_0> cdm:work_is_logical_successor_of_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_x> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_x.ITA> cdm:expression_belongs_to_work <http://publications.europa.eu/resource/celex/01992L0043-20130701_x> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_x.ITA> cdm:expression_uses_language ns1:ITA .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_x> cdm:work_is_member_of_complex_work <http://publications.europa.eu/resource/celex/01992L0043-20130701> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_x> <http://publications.europa.eu/ontology/cdm#work_date_document> "2013-07-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://publications.europa.eu/resource/celex/01992L0043-20130701_x> <http://publications.europa.eu/ontology/cdm#work_date_creation> "2013-07-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 }
